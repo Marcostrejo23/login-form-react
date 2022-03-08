@@ -12,11 +12,11 @@ function App() {
   const database = [
     {
       username: "user1",
-      password: "pass1",
+      password: "password1",
     },
     {
       username: "user2",
-      password: "pass2",
+      password: "password2",
     },
   ];
 
@@ -79,7 +79,7 @@ function App() {
     <div className="app">
       <div className="login-form">
         <div className="title">Sign In</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+        {isSubmitted ? <div>successfully logged in</div> : renderForm}
       </div>
     </div>
   );
