@@ -9,14 +9,10 @@ function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // User Login info
-  const database = [
+  const testDatabase = [
     {
       username: "user1",
       password: "password1",
-    },
-    {
-      username: "user2",
-      password: "password2",
     },
   ];
 
@@ -32,7 +28,7 @@ function App() {
     var { uname, pass } = document.forms[0];
 
     // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
+    const userData = testDatabase.find((user) => user.username === uname.value);
 
     // Compare user info
     if (userData) {
