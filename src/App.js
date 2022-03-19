@@ -71,15 +71,7 @@ function App() {
     </div>
   );
 
-  return (
-    <div className="app">
-      <div className="login-form">
-        <div className="title">Sign In</div>
-        {isSubmitted ? <div>successfully logged in</div> : renderForm}
-      </div>
-    </div>
-  );
-}
+
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
