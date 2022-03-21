@@ -27,7 +27,7 @@ input[type="submit"]:hover {
   background: #D9CE3F;
 }
 
-.button-container {
+.login-button {
   display: flex;
   justify-content: center;
 }
