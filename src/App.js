@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 
 import "../src/App.css";
 
-function App() {
+export default function App() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -25,7 +25,7 @@ function App() {
     //Prevent page reload
     event.preventDefault();
 
-    var { uname, pass } = document.forms[0];
+    let { uname, pass } = document.forms[0];
 
     // Find user login info
     const userData = testDatabase.find((user) => user.username === uname.value);
@@ -70,10 +70,4 @@ function App() {
       </form>
     </div>
   );
-
-
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
-
-export default App;
+};
