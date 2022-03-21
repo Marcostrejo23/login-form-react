@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 
 import "../src/App.css";
 
@@ -9,10 +9,14 @@ export default function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // User Login info
-  const testDatabase = [
+  const database = [
     {
       username: "user1",
-      password: "password1",
+      password: "pass1",
+    },
+    {
+      username: "user2",
+      password: "pass2",
     },
   ];
 
@@ -25,10 +29,10 @@ export default function App() {
     //Prevent page reload
     event.preventDefault();
 
-    let { uname, pass } = document.forms[0];
+    var { uname, pass } = document.forms[0];
 
     // Find user login info
-    const userData = testDatabase.find((user) => user.username === uname.value);
+    const userData = database.find((user) => user.username === uname.value);
 
     // Compare user info
     if (userData) {
@@ -70,4 +74,16 @@ export default function App() {
       </form>
     </div>
   );
-};
+
+  return (
+    <div className="app">
+      <div className="login-form">
+        <div className="title">Sign In</div>
+        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+      </div>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
